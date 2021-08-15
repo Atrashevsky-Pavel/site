@@ -1,0 +1,121 @@
+.credit {
+     padding: 60px 0;
+     background-color: $color-light-grey;
+
+     color: $color-dark;
+
+     &__title {
+          font-weight: 700;
+          text-align: center;
+          font-size: 32px;
+
+          margin-bottom: 50px;
+
+          span {
+               display: block;
+               color: $color-orange;
+          }
+
+          @include breakpoint($bp-sm) {
+               font-size: 24px;
+          }
+     }
+
+     &__cart {
+          text-align: center;
+
+          &-photo {
+               img {
+                    width: 60%;
+               }
+          }
+
+          &-text {
+               margin: 10px 0 0 0;
+
+               font-size: 18px;
+               font-weight: 700;
+
+               @include breakpoint($bp-lg) {
+                    font-size: 16px;
+               }
+               @include breakpoint($bp-sm) {
+                    font-size: 14px;
+                    margin-top: 6px;
+               }
+          }
+     }
+
+     &__bank {
+          margin-top: 50px;
+
+          text-align: center;
+          font-weight: 700;
+          font-size: 18px;
+
+          @include breakpoint($bp-lg) {
+               font-size: 16px;
+          }
+          @include breakpoint($bp-sm) {
+               font-size: 14px;
+          }
+
+          &-title {
+               color: $color-orange;
+               font-size: 32px;
+               font-weight: 700;
+
+               margin-bottom: 40px;
+
+               @include breakpoint($bp-sm) {
+                    font-size: 24px;
+               }
+          }
+
+          &-stripe {
+               display: block;
+               width: 25%;
+               border: 3px dashed $color-orange;
+
+               margin: 60px auto;
+          }
+
+          &-name {
+               margin-bottom: 15px;
+               font-weight: 700;
+               font-size: 18px;
+
+               @include breakpoint($bp-sm) {
+                    font-size: 16px;
+               }
+               @include breakpoint($bp-sm) {
+                    font-size: 14px;
+               }
+          }
+
+          &-advantages {
+               display: block;
+               margin-bottom: 15px;
+          }
+
+          &-text {
+               margin: 0;
+               
+
+               @include breakpoint($bp-lg) {
+                    font-size: 14px;
+               }
+               @include breakpoint($bp-sm) {
+                    text-align: justify;
+               }
+          }
+
+          img {
+               width: 80%;
+
+               @include breakpoint($bp-lg) {
+                    margin-bottom: 20px;
+               }
+          }
+     }
+}

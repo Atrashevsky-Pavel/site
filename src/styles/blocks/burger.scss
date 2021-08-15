@@ -1,0 +1,43 @@
+.burger {
+     width: 38px;
+     height: 38px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+
+      &__stick {
+          width: 38px;
+          height: 4px;
+          border-radius: 4px;
+          margin-bottom: 7px;
+          background-color:  $color-orange;
+          display: inline-block;  
+
+          transition: all .3s ease;
+
+          &:last-child {
+               margin-bottom: 0;
+          }
+      }
+
+      &.opened { 
+          div {
+               width: 30px;
+          }
+
+          div:first-child {
+               width: 0;
+               transform: translateY(-50px);
+          }
+
+          div:nth-child(2) {
+               transform: rotate(45deg) translate3d(0px, 0px, 0);
+          }
+
+          div:last-child {
+               transform: rotate(-45deg) translate3d(8px, -8px, 0);
+          }
+      }
+}

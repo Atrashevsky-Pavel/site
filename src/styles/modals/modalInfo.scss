@@ -1,0 +1,176 @@
+.modalInfo {
+
+     &__body {
+          padding: 0 40px 40px 40px;
+
+          @include breakpoint($bp-xl) {
+               padding: 0 30px 30px 30px;
+          }
+          @include breakpoint($bp-lg) {
+               padding-bottom: 40px;
+          }
+          @include breakpoint($bp-sm) {
+               padding-bottom: 20px;
+          }
+     }
+
+     &__grid {
+          display: grid;
+          grid-auto-flow: column;
+          grid-template: auto auto / 50% 50%;
+
+          @include breakpoint($bp-xl) {
+               grid-template-rows: 350px auto;
+          }
+          @include breakpoint($bp-lg) {
+               grid-template: auto / 100%;
+               grid-auto-flow: row;
+          }
+     }
+
+     &__carousel {
+          margin-bottom: 70px;
+
+          @include breakpoint($bp-xl) {
+               margin-bottom: 40px;
+          }
+          @include breakpoint($bp-lg) {
+               margin-left: -10px;
+               margin-right: -10px;
+          }
+
+          &-inner {
+               height: 440px;
+
+               @include breakpoint($bp-xl) {
+                    height: 300px;
+               }
+               @include breakpoint($bp-lg) {
+                    height: 370px;
+               }
+               @include breakpoint($bp-sm) {
+                    height: 70vw;
+               }
+          }
+
+          &-item {
+               text-align: center;
+               height: 100%;
+
+               img {
+                    width: 80%;
+                    height: 100%;
+               }
+          }
+     }
+
+     &__info {
+          padding-left: 20px;
+
+          grid-row-start: 1;
+          grid-row-end: 3;
+
+          color: $color-dark;
+
+          @include breakpoint($bp-lg) {
+               grid-row-start: 2;
+               grid-row-end: 3;
+
+               padding-left: 0;
+               margin-bottom: 20px;
+          }
+     }
+
+     &__form {
+          margin: 0 auto;
+          width: 80%;
+
+          @include breakpoint($bp-lg) {
+               order: 1;
+          }
+          @include breakpoint($bp-sm) {
+               width: 100%;
+          }
+     }
+
+     &__title {
+          font-size: 2rem;
+          font-weight: 700;
+
+          margin-bottom: 15px;
+
+          @include breakpoint($bp-sm) {
+               font-size: 24px;
+               text-align: center;
+          }
+     }
+
+     &__tags {
+          display: flex;
+          flex-wrap: wrap;
+
+          margin-bottom: 20px;
+
+          span {
+               display: inline-block;
+
+               border-radius: 10px;
+               background-color: orangered;
+
+               padding: 8px;
+
+               font-size: 16px;
+               text-transform: uppercase;
+               color: #fff;
+
+               margin-right: 10px;
+               margin-top: 10px;
+
+               &:last-child {
+                    margin-right: 0;
+               }
+
+               @include breakpoint($bp-sm) {
+                    font-size: 14px;
+               }
+          }
+     }
+
+     &__properties {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          font-size: 18px;
+          line-height: 1.4;
+
+          margin-bottom: 30px;
+
+          @include breakpoint($bp-sm) {
+               font-size: 14px;
+          }
+     }
+
+     &__description {
+          font-size: 18px;
+          line-height: 1.2;
+
+          @include breakpoint($bp-sm) {
+               font-size: 14px;
+          }
+     }
+
+     &__controls {
+          &-prev,
+          &-next {
+               i {
+                    color: red;
+                    font-size: 40px;
+
+                    @include breakpoint($bp-sm) {
+                         font-size: 30px;
+                    }
+               }
+          }
+     }
+}

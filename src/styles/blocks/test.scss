@@ -1,0 +1,17 @@
+.test {
+     padding: 50px 0;
+
+     text-align: center;
+
+     &__title {
+          font-weight: 700;
+          font-size: 32px;
+
+          margin-bottom: 50px;
+     }
+
+     button {
+          width: 100%;
+          max-width: 350px;
+     }
+}

@@ -1,0 +1,16 @@
+.consultation {
+     padding: 80px 0;
+
+     &__title {
+          font-size: 32px;
+          text-align: center;
+          font-weight: 700;
+          color: #000;
+
+          margin-bottom: 50px;
+
+          @include breakpoint($bp-sm) {
+               font-size: 24px;
+          }
+     }
+}

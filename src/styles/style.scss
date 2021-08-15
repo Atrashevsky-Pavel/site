@@ -1,0 +1,36 @@
+@import './fonts';
+@import './vars';
+@import './mixins';
+
+
+
+
+
+
+@import './blocks/header.scss';
+@import './blocks/burger.scss';
+@import './blocks/main.scss';
+@import './blocks/about.scss';
+@import './blocks/gifts.scss';
+@import './blocks/catalog.scss';
+@import './blocks/filter.scss';
+@import './blocks/maincard.scss';
+@import './blocks/test.scss';
+@import './blocks/offer.scss';
+@import './blocks/fake.scss';
+@import './blocks/credit.scss';
+@import './blocks/consultation.scss';
+@import './blocks/reviews.scss';
+@import './blocks/team.scss';
+@import './blocks/services.scss';
+@import './blocks/certificates.scss';
+@import './blocks/questions.scss';
+@import './blocks/gallery.scss';
+@import './blocks/footer.scss';
+
+@import './app.scss';
+
+@import './modals/modal.scss';
+@import './modals/modalInfo.scss';
+@import './modals/modalTest.scss';
+@import './modals/modalOrder.scss';

@@ -1,0 +1,163 @@
+.about {
+     padding: 100px 0;
+
+     background-color: $color-light-grey;
+
+     color: $color-dark;
+
+     @include breakpoint($bp-sm) {
+          padding: 50px 0;
+     }
+
+     &__title {
+          font-size: 32px;
+          font-weight: 700;
+          text-align: center;
+
+          margin-bottom: 40px;
+     }
+
+     &__items {
+          margin-bottom: 90px;
+     }
+
+     &__item {
+          display: flex;
+
+          @include breakpoint($bp-lg) {
+               align-items: center;
+          }
+
+          &-description {
+               width: 70%;
+               padding-right: 10px;
+          }
+
+          &-title {
+               font-size: 28px;
+               font-weight: 700;
+               margin: 0 0 6px 0;
+               line-height: 1.1;
+
+               @include breakpoint($bp-sm) {
+                    font-size: 20px;
+               }
+          }
+
+          &-text {
+               margin: 0;
+
+               line-height: 1.2;
+               font-size: 18px;
+               font-weight: 500;
+
+               @include breakpoint($bp-sm) {
+                    font-size: 14px;
+               }
+          }
+
+          &-photo {
+               width: 30%;
+
+               position: relative;
+
+               text-align: center;
+
+               img {
+                    width: 80%;
+
+                    position: relative;
+                    z-index: 1;
+               }
+
+               &:after {
+                    content: "";
+                    display: block;
+                    
+                    width: 80px;
+                    height: 80px;
+                    
+                    background-color: orangered;
+                    border-radius: 50%;
+
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    z-index: 0;
+
+                    transform: translateX(-50%);
+               }
+          }
+     }
+
+     &__consultation {
+          padding: 60px;
+
+          border-radius: 100px;
+          background-color: orangered;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          @include breakpoint($bp-lg) {
+               padding: 45px;
+               border-radius: 60px;
+
+               flex-direction: column;
+          }
+
+          @include breakpoint($bp-sm) {
+               padding: 20px;
+               border-radius: 20px;
+          }
+
+          &-header {
+               width: 47%;
+
+               @include breakpoint($bp-lg) {
+                    width: 100%;
+
+                    text-align: center;
+
+                    margin-bottom: 40px;
+               }
+          }
+
+          &-title {
+               font-size: 1.75rem;
+               font-weight: 700;
+               color: #fff;
+               margin-bottom: 0.5rem;
+
+               @include breakpoint($bp-sm) {
+                    font-size: 20px;
+               }
+          }
+
+          &-text {
+               margin: 0;
+               font-size: 20px;
+               color: #fff;
+               line-height: 1.1;
+
+               @include breakpoint($bp-sm) {
+                    font-size: 16px;
+               }
+          }
+
+          &-form {
+               width: 50%;
+
+               @include breakpoint($bp-lg) {
+                    width: 100%;
+               }
+               @include breakpoint($bp-sm) {
+                    button {
+                         padding-left: 10px;
+                         padding-right: 10px;
+                    }
+               }
+          }
+     }
+}

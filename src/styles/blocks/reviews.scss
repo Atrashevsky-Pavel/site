@@ -1,0 +1,52 @@
+.reviews {
+     padding: 50px 0;
+
+     background: #000 url('./../assets/img/reviews/reviews-bg.png') center no-repeat;
+     background-size: cober;
+
+     text-align: center;
+
+     &__title {
+          font-size: 32px;
+          font-weight: 700;
+          color: #fff;
+          text-align: center;
+
+          margin-bottom: 0;
+     }
+
+     
+     &__grid {
+          display: flex;
+          flex-wrap: wrap;
+
+          justify-content: space-between;
+
+          &-item {
+               margin-top: 20px;
+
+               width: 31%;
+               max-height: 480px;
+               
+               cursor: pointer;
+
+               transition: transform .3s ease;
+
+               &:hover {
+                    transform: scale(1.05);
+               }
+               
+               img {
+                    max-height: 100%;
+                    max-width: 100%;
+               }
+
+               @include breakpoint($bp-lg) {
+                    width: 48%;
+               }
+               @include breakpoint($bp-sm) {
+                    width: 100%;
+               }
+          }
+     }
+}

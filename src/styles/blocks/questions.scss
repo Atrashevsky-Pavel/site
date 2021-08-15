@@ -1,0 +1,153 @@
+.questions {
+     padding: 40px 0 80px 0;
+
+     background-color: $color-light-grey;
+
+     @include breakpoint($bp-sm) {
+          padding-bottom: 40px;
+     }
+
+     &__title {
+          text-align: center;
+          font-weight: 700;
+          font-size: 32px;
+
+          margin-bottom: 40px;
+
+          @include breakpoint($bp-sm) {
+               font-size: 24px;
+          }
+     }
+
+     &__accordion {
+          margin: 0 auto;
+          max-width: 1100px;
+
+          &-item  {
+               border: none;
+               border-radius: 0 !important;
+               border-bottom: 1px solid $color-orange;
+
+               background-color: transparent;
+          }
+          
+          &-header {
+               button {
+                    padding: 15px 30px 15px 0;
+
+                    font-weight: 700;
+                    color: #000 !important;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    
+                    background-color: transparent !important;
+                    box-shadow: none !important;
+                    border: none !important;
+
+                    @include breakpoint($bp-md) {
+                         font-size: 18px;
+                    }
+                    @include breakpoint($bp-md) {
+                         font-size: 16px;
+                    }
+
+                    position: relative;
+
+                    &:focus {
+                         box-shadow: none;
+                    }
+
+                    &:after,
+                    &:before {
+                         content: "";
+                         display: block;
+
+                         margin: 0;
+
+                         background: $color-orange;
+                         border-radius: 2px;
+
+                         position: absolute;
+                         top: 50%;
+                         right: 0;
+
+                         transform: translateY(-50%);
+                    }
+
+                    &:before {
+                         height: 4px;
+                         width: 20px;
+
+                         @include breakpoint($bp-sm) {
+                              height: 3px;
+                              width: 17px;
+                         }
+                    }
+
+                    &:after {
+                         height: 20px;
+                         width: 4px;
+
+                         right: 8px;
+
+                         transition: height .3s ease;
+
+                         @include breakpoint($bp-sm) {
+                              width: 3px;
+                              height: 17px;
+                              right: 7px;
+                         }
+                    }
+
+                    &:not(.collapsed) {
+                         &:after {
+                              height: 4px;
+                              transform: translateY(-50%);
+
+                              @include breakpoint($bp-sm) {
+                                   height: 3px;
+                              }
+                         }
+                    }
+               }
+          }
+
+          &-body {
+               padding: 15px 0;
+
+               font-weight: 600;
+               font-size: 18px;
+
+               @include breakpoint($bp-md) {
+                    font-size: 16px;
+               }
+               @include breakpoint($bp-md) {
+                    font-size: 14px;
+               }
+
+               p {
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+
+               span {
+                    &.--tab {
+                         padding-left: 40px;
+
+                         @include breakpoint($bp-md) {
+                              padding-left: 30px;
+                         }
+                         @include breakpoint($bp-sm) {
+                              padding-left: 0;
+                         }
+                    }
+
+                    &.--orange {
+                         color: $color-orange;
+                         font-weight: 700;
+                    }
+               }
+          }
+     }
+}

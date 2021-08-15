@@ -1,0 +1,31 @@
+.modalOrder {
+     &__title {
+          text-align: center;
+          font-weight: 700;
+          font-size: 32px;
+
+          margin-bottom: 40px;
+     }
+
+     &__form {
+          padding: 0 30px 30px 30px;
+
+          @include breakpoint($bp-sm) {
+               padding: 0 10px 10px 10px;
+          }
+
+          input {
+               border: 1px dashed #000;  
+               border-left: none;
+          }
+
+          &-prepand {
+               
+               span {
+                    border: 1px dashed #000;
+                    color: #fff;
+                    background-color: $color-orange;
+               }
+          }
+     }
+}

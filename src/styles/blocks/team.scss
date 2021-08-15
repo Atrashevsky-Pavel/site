@@ -1,0 +1,54 @@
+.team {
+     padding: 40px 0;
+
+     background-color: $color-light-grey;
+
+     &__title {
+          text-align: center;
+          font-weight: 700;
+          color: #000;
+          font-size: 32px;
+
+          margin-bottom: 20px;
+
+          @include breakpoint($bp-sm) {
+               font-size: 24px;
+          }
+     }
+
+     &__person {
+          margin-top: 20px;
+
+          text-align: center;
+
+          &-photo {
+               margin-bottom: 20px;
+
+               img {
+                    padding: 4px;
+                    border: 8px solid #1b1e21;
+                    border-radius: 100%;
+                    width: 80%;
+               }
+          }
+
+          &-name {
+               font-weight: 800;
+               font-size: 32px;
+
+               margin-bottom: 6px;
+
+               @include breakpoint($bp-xl) {
+                    font-size: 22px;
+               }
+          }
+
+          &-position {
+               font-size: 18px;
+
+               @include breakpoint($bp-xl) {
+                    font-size: 16px;
+               }
+          }
+     }
+}

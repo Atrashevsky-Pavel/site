@@ -1,0 +1,82 @@
+.app {
+     &-btn {
+          padding: 12px 80px;
+
+          color: #fff;
+          font-size: 17px;
+          font-weight: 700;
+
+          border-radius: 5px;
+          border: 1px solid transparent;
+          background-color: transparent;
+
+          cursor: pointer;
+
+          transition: all .3s ease;
+
+          &:focus {
+               outline: none;
+          }
+
+          &-black {
+               background-color: #000;
+               border-color: #000;
+
+               &:hover {
+                    background-color: red;
+               }
+          }
+          &-orange {
+               background-color: $color-orange;
+               border-color: $color-orange;
+
+               &:hover {
+                    background-color: lighten($color-orange, 10%);
+               }
+          }
+          &-grey {
+               background-color: $color-grey;
+
+               &:hover {
+                    background-color: darken($color-grey, 10%);
+               }
+          }
+
+          &-block {
+               display: block;
+               width: 100%;
+
+               padding: 12px;
+          }
+
+          &-rounded {
+               border-radius: 15px;
+          }
+     }
+
+     &-input {
+          padding: 12px 0.75rem;
+
+          &-prepend {
+               span {
+                    border-radius: .25rem 0 0 .25rem;
+                    min-width: 80px;
+                    padding: 12px 0.75rem;
+                    font-weight: 700;
+                    color: $color-dark;
+               }
+          }
+
+          @include breakpoint($bp-sm) {
+               padding: 8px 0.75rem;
+
+               &-prepend {
+                    span {
+                         min-width: 67px;
+                         font-size: 0.8rem;
+                         padding: 11px;
+                    }
+               }
+          }
+     }
+}

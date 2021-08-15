@@ -1,0 +1,212 @@
+.header {
+     position: fixed;
+     width: 100%;
+     z-index: 1000;
+
+     padding: 1rem;
+
+     background-color: $color-light-white;
+     box-shadow: 0 3px 5px 0 darken($color-light-white, 10%);
+
+     &__nav {
+          transition: height .4s ease;
+          ul {
+               list-style: none;
+               padding: 0;
+               margin: 0;
+
+               display: flex;
+               align-items: center;
+               justify-content: space-around;
+
+
+               li {
+                    transition: transform .3s ease;
+
+                    a {
+                         color: #000;
+                         font-weight: 700;
+                         font-size: 16px;
+                         text-decoration: none;
+
+                         position: relative;
+
+                         background-color: transparent;
+
+                         transition: color .3s ease;
+
+                         @include breakpoint($bp-lg) {
+                              font-size: 14px;
+                         }
+
+                         &:hover {
+                              color: $color-orange;
+                              
+                              &:after,
+                              &:before {
+                                   width: 50%;
+                              }
+                         }
+          
+                         &:after,
+                         &:before {
+                              content: "";
+                              display: block;
+          
+                              width: 0;
+                              height: 2px;
+          
+                              background-color: $color-orange;
+          
+                              position: absolute;
+                              z-index: 0;
+                              bottom: -2px;
+          
+
+                              transition: width .3s ease;
+                         }
+          
+                         &:after {
+                              left: 0;
+                         } 
+          
+                         &:before {
+                              right: 0;
+                         }
+                    }
+
+               }
+          }
+
+          @include breakpoint($bp-md) {
+               height: 0;
+               overflow: hidden;
+
+               ul {
+                    margin-top: 20vw;
+                    flex-direction: column;
+
+                    li {
+                         margin-bottom: 10px;
+
+                         a {
+                              font-size: 20px;
+
+                              &:after,
+                              &:before {
+                                   height: 3px;
+                              }
+                         }
+                    }
+               }
+
+               &.opened {
+                    height: 100vh;
+               }
+          }
+     }
+
+     &__contacts {
+          &-phone {
+               display: flex;
+               align-items: center;
+
+               color: #000;
+               text-decoration: none;
+               font-weight: 500;
+
+               transition: color .3s ease;
+
+               position: relative;
+
+               img {
+                    width: 20px;
+                    height: 20px;
+               }
+
+               &:hover {
+                    color: $color-orange;
+                    
+                    &:after,
+                    &:before {
+                         width: 50%;
+                    }
+               }
+
+               &:after,
+               &:before {
+                    content: "";
+                    display: block;
+
+                    width: 0;
+                    height: 2px;
+
+                    background-color: $color-orange;
+
+                    position: absolute;
+                    bottom: -2px;
+
+                    transition: width .3s ease;
+               }
+
+               &:after {
+                    left: 0;
+               } 
+
+               &:before {
+                    right: 0;
+               }
+          }
+     }
+
+     &__btns {
+
+          i {
+               display: inline-block;
+               padding: 6px 9px;
+
+               border-radius: 5px;
+
+               background-color: $color-orange;
+               border: 1px solid transparent;
+
+               color: #fff;
+               font-size: 1.5rem;
+
+               cursor: pointer;
+
+               transition: all .3s ease;
+
+               &:hover {
+                    border-color: $color-orange;
+                    background-color: transparent;
+                    color: #000;
+               }
+          }
+
+          button {
+               display: inline-block;
+               padding: 16px 14px;
+     
+               font-size: .9rem;
+               text-transform: uppercase;
+               color: #fff;
+               
+               background-color: $color-orange;
+               border: 1px solid transparent;
+               border-radius: 3px;
+     
+               transition: all .3s ease;
+     
+               &:focus {
+                    outline: none;
+               }
+     
+               &:hover {
+                    border-color: $color-orange;
+                    background-color: transparent;
+                    color: #000;
+               }
+          }
+     }
+}

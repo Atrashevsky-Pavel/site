@@ -1,0 +1,28 @@
+.offer {
+     padding: 60px 0;
+
+     background: url('../assets/img/offer/offer-bg.jpg') center no-repeat;
+     background-size: cover;
+
+     &__inner {
+          max-width: 750px;
+          margin: 0 auto;
+     }
+
+     &__title {
+          color: #fff;
+          font-weight: 700;
+          font-size: 28px;
+          text-align: center;
+
+          margin-bottom: 50px;
+
+          span {
+               color: $color-orange;
+          }
+
+          @include breakpoint($bp-sm){
+               font-size: 22px;
+          }
+     }
+}

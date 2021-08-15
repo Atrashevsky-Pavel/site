@@ -1,0 +1,89 @@
+.fake {
+     padding: 80px 0;
+
+     background-color: #f3f3f3;
+
+     @include breakpoint($bp-sm) {
+          padding: 40px 0;
+     }
+
+     &__title {
+          color: $color-dark;
+          font-weight: 700;
+          text-align: center;
+          font-size: 32px;
+
+          margin-bottom: 50px;
+          
+          span {
+               color: $color-orange;
+          }
+     }
+
+     &__item {
+          padding: 5px;
+          margin: 25px;
+
+          height: 100%;
+
+          border-radius: 15px;
+          border: 3px dashed orangered;
+          background-color: #fff;
+
+          @include breakpoint($bp-sm) {
+               height: auto;
+               margin: 0;
+          }
+          
+          &.--fake {
+               background-color: #333;
+               color: #fff;
+               font-weight: 700;
+
+               li {
+                    &:after {
+                         content: "\00D7";
+                         color: red;
+                    }
+               }
+          }
+
+          &-photo {
+               img {
+                    width: 100%;
+               }
+          }
+
+          &-list {
+               padding: 25px 25px 25px 50px;
+
+               margin: 0;
+
+               font-size: 17px;
+               line-height: 1.3;
+               font-weight: 500;
+
+               @include breakpoint($bp-sm) {
+                    font-size: 15px;
+                    padding: 20px 20px 20px 35px;
+               }
+
+               li {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+
+                    &:after {
+                         content: "\2713";
+                         margin-left: 5px;
+
+                         font-size: 24px;
+                         font-weight: 700;
+                         color: green;
+                    }
+               }
+          }
+     }
+}

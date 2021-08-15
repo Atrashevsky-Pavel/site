@@ -1,0 +1,16 @@
+
+export const MODAL_INFO_CAROUSEL_INNER_SELECTOR = '.carousel-inner'
+export const MODAL_INFO_TITLE_SELECTOR = '.modalInfo__title'
+export const MODAL_INFO_PRICE_OLD_SELECTOR = '[data-price-old]'
+export const MODAL_INFO_PRICE_NEW_SELECTOR = '[data-price-new]'
+export const MODAL_INFO_TAGS_SELECTOR = '.modalInfo__tags'
+export const MODAL_INFO_PROPERTIES_SELECTOR = '.modalInfo__properties'
+export const MODAL_INFO_DESCRIPTION_SELECTOR = '.modalInfo__description'
+export const MODAL_INFO_SELECTOR = '#modal-info'
+export const MODAL_INFO_BTN_OPEN_SELECTOR = '[data-modal-info-btn]'
+export const MODAL_INFO_PRODUCT_INPUT_SELECTOR = 'input[name="product"]'
+
+export const CATALOG_CARD_SELECTOR = '.maincard'
+export const CATALOG_ROOT_SELECTOR = '#catalog-cards-root'
+export const CATALOG_FILTER_BTN_RESET_SELECTOR = '[data-filter-reset]'
+export const CATALOG_FILTER_SELECTOR = '#catalog-filter'
